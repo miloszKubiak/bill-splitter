@@ -6,7 +6,7 @@ const countBtn = document.querySelector('.count');
 const costInfo = document.querySelector('.cost-info');
 const cost = document.querySelector('.cost');
 
-const showBill = () => {
+const checkForm = () => {
     if (price.value == '' || people.value == '' || tip.value == 0) {
         error.textContent = 'You must complete all fields!';
         costInfo.style.display = 'none';
@@ -26,4 +26,4 @@ const countBill = () => {
     cost.textContent = sum.toFixed(2)
 };
 
-countBtn.addEventListener('click', showBill);
+countBtn.addEventListener('click', checkForm);
